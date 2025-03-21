@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body id="form-page">
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="capital.html">Capital City</a></li>
+            <li><a href="city1.html">Orlando</a></li>
+            <li><a href="city2.html">Miami</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <main>
+            <section> 
+                <h2 style= "text-align: center;">Contact Us</h2>
+                <p style= "text-align: center;">If you have any questions, feel free to reach out to us!</p>
+            </section>
+
+            <form action="submit_form.php" method="POST" onsubmit="return validateEmails()">
+                <!-- First Name -->
+                <label for="first-name">First Name:</label><br>
+                <input type="text" id="first-name" name="first-name" required><br><br>
+    
+                <!-- Last Name -->
+                <label for="last-name">Last Name:</label><br>
+                <input type="text" id="last-name" name="last-name" required><br><br>
+    
+                <!-- Email -->
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+    
+                <!-- Confirm Email -->
+                <label for="confirm-email">Confirm Email Address:</label><br>
+                <input type="email" id="confirmEmail" name="confirm-email" required><br><br>
+                <div id="errorMessage" style="color: red;"></div> <!-- error message container -->
+
+                <!-- Message -->
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="8" cols="100" required></textarea><br><br>
+    
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+            </form>
+    
+            <section>
+                <h2>Explore more of Florida!</h2>
+                <img src="images/manateeform.jpg" alt="Picture of Manatee" width="500">
+            </section>
+        </main>
+
+        <aside>
+            <h3>How's the weather?</h3>
+            <p>
+                The weather in Florida is typically warm and sunny, making it a great destination for outdoor activities.
+            </p>
+        </aside>   
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 My State Website</p>
+    </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
