@@ -13,8 +13,7 @@ function validateEmails(){
 }
 
 
-// Toggle mobile menu overlay
-document.getElementById('mobile-menu').addEventListener('click', function() {
-    document.getElementById('nav-links').classList.toggle('active');
-});
 
+function myFunction(x) {
+    x.classList.toggle("change");
+}
