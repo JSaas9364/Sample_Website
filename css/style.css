@@ -13,7 +13,7 @@ body, html {
 /* ================= Responsive Navigation for Small Screens vvvvvvvvv ================= */
 @media screen and (max-width: 800px) {
     .menu-icon {
-        display: inline-block;
+        z-index: 1100;
     }
 
     .nav-links {
@@ -30,7 +30,13 @@ body, html {
         gap: 20px;
         z-index: 1000;
     }
+    .nav-links li {
+        margin-bottom: 15px; /* Adjust the spacing between items */
+    }
 
+    .nav-links .btn {
+        margin-top: 10px; /* Adds spacing above the Join Now button */
+    }
     .nav-links.menu-open {
         display: flex; /* Now works correctly because flex overrides */
     }
@@ -79,14 +85,15 @@ header {
 }
 
 /* Hamburger Menu Animation */
-.menu-open .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+
+.menu-icon.change .bar:nth-child(1) {
+    transform: translateY(11px) rotate(-45deg);
 }
-.menu-open .bar2 {
+.menu-icon.change .bar:nth-child(2) {
     opacity: 0;
 }
-.menu-open .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
+.menu-icon.change .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(45deg);
 }
 
 

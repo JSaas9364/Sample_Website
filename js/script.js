@@ -14,7 +14,8 @@ function validateEmails(){
 
 
 
-function myFunction(x) {
-    x.classList.toggle("change");
-    document.querySelector(".nav-links").classList.toggle("menu-open");
+function toggleMenu(x) {
+    x.classList.toggle("change"); // Rotates burger into "X"
+    document.querySelector(".nav-links").classList.toggle("menu-open"); // Toggles menu
+    console.log(document.querySelector(".menu-icon").classList);
 }
