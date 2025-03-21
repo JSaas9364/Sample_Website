@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <header>
         <div class="logo">
             <a href="index.html">
                 <img src="images/logo.png" alt="Game Logo">
             </a>
         </div>
+    
         <nav>
-            <ul>
+            <ul id="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Games</a></li>
@@ -23,8 +25,15 @@
                 <li><a href="/form.html" class="btn">Join Now</a></li>
             </ul>
         </nav>
+    
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
     
+
     <section class="hero">
         <video autoplay muted loop id="background-video">
             <source src="images/background.mp4" type="video/mp4">

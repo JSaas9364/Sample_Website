@@ -11,3 +11,10 @@ function validateEmails(){
         return true;
     }
 }
+
+
+// Toggle mobile menu overlay
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('active');
+});
+
