@@ -7,70 +7,66 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body id="form-page">
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="form-background-video">
+        <source src="images/tree.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <header>
-        <h1>Contact Us</h1>
+        <div class="logo">
+            <img src="images/logo.png" alt="Game Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#" class="btn">Join Now</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="capital.html">Capital City</a></li>
-            <li><a href="city1.html">Orlando</a></li>
-            <li><a href="city2.html">Miami</a></li>
-        </ul>
-    </nav>
+    <div class="contact-page">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out to us!</p>
 
-    <div class="main-container">
-        <main>
-            <section> 
-                <h2 style= "text-align: center;">Contact Us</h2>
-                <p style= "text-align: center;">If you have any questions, feel free to reach out to us!</p>
-            </section>
-
-            <form action="submit_form.php" method="POST" onsubmit="return validateEmails()">
+            <form action="submit_form.php" method="POST" class="contact-form" onsubmit="return validateEmails()">
                 <!-- First Name -->
-                <label for="first-name">First Name:</label><br>
-                <input type="text" id="first-name" name="first-name" required><br><br>
-    
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
                 <!-- Last Name -->
-                <label for="last-name">Last Name:</label><br>
-                <input type="text" id="last-name" name="last-name" required><br><br>
-    
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
                 <!-- Email -->
-                <label for="email">Email Address:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-    
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
                 <!-- Confirm Email -->
-                <label for="confirm-email">Confirm Email Address:</label><br>
-                <input type="email" id="confirmEmail" name="confirm-email" required><br><br>
-                <div id="errorMessage" style="color: red;"></div> <!-- error message container -->
+                <label for="confirm-email">Confirm Email Address:</label>
+                <input type="email" id="confirmEmail" name="confirm-email" required>
+                <div id="errorMessage" style="color: red;"></div>
 
                 <!-- Message -->
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="8" cols="100" required></textarea><br><br>
-    
-                <!-- Submit Button -->
-                <input type="submit" value="Submit">
-            </form>
-    
-            <section>
-                <h2>Explore more of Florida!</h2>
-                <img src="images/manateeform.jpg" alt="Picture of Manatee" width="500">
-            </section>
-        </main>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-        <aside>
-            <h3>How's the weather?</h3>
-            <p>
-                The weather in Florida is typically warm and sunny, making it a great destination for outdoor activities.
-            </p>
-        </aside>   
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-    
+
     <footer>
-        <p>&copy; 2025 My State Website</p>
+        <p>&copy; 2025 Game Website</p>
     </footer>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,212 +1,233 @@
-/* MAIN INDEX - set all page margin and padding to zero, prevent overflow and gaps*/
+/* General Styles */
 body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    height: 100%;
-}
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background: #0a0a0a;
+    color: white;
     overflow-x: hidden;
 }
 
-.absolute-section{
-    position: absolute;
-    font-weight: 400;
+/* Header / Navigation Bar */
+header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #f4f4f4;
-}
-.relative-section {
-    position: relative;
-    font-weight: 400;
-    left: 30px; 
-    top: 20px; /* Now moves */
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ccc;
+    height: 15vh;
+    max-height: 15vh; /* Prevents unwanted resizing */
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    z-index: 1000;
 }
 
-/* Header section */
-header {
-    background: url('../images/herobanner.png') no-repeat center;
-    background-size: cover;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    font-size: 2.5em;
-    font-weight: bold;
-    height: 400px;
-    display: grid;
-    place-items: center;
-    background-position: center 75%;
-}
-header img{
-    width: 100%;
-    height: auto;
-    object-fit: cover; 
-}
-#capital-page header{
-    background: url('../images/TallahasseeStock.png') no-repeat center;
-    background-size: cover;
-    place-items: center;
-    background-position: center 75%;
-}
-#city1-page header{
-    background: url('../images/orlandocity.png') no-repeat center;
-    background-size: cover;
-    place-items: center;
-    background-position: center 75%;
-}
-#city2-page header{
-    background: url('../images/miamicity.jpg') no-repeat center;
-    background-size: cover;
-    place-items: center;
-    background-position: center 75%;
-}
-#form-page header{
-    background: url('../images/everglades.png') no-repeat center;
-    background-size: cover;
-    place-items: center;
-    background-position: center 75%;
-}
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-/* Navigation bar styling -- DO NOT EDIT!!*/
-nav {
-    background: #333;
-    padding: 10px;
+/* Logo Clickable */
+.logo {
     display: flex;
-    justify-content: right;
-    left: 0;
-    width: 100%;
-    z-index: 10;
+    align-items: center;
+    height: 100%;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 70%; /* Adjust the logo size */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 5px 30px 5px 0px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 40px; /* Adjust spacing to match sample */
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    border-color: white;
-    color: #f39c12; /* orange */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
-/* NAV BAR END --- DO NOT EDIT!!!!!! */
-
-section > h2{
-    font-size:2.5rem; /* Bigger for readability, changed to > to target ONLY First element */
-    padding: 15px;
+nav ul li a:hover {
+    color: #00bcd4;
 }
 
-/* Main content area */
-.main-container {
-    display: grid; /* Watch for Overflow! */
-    grid-template-columns: 3fr 1fr; /* Main content takes up 3/4, aside takes up 1/4, ~20-25% */
-    gap: 20px;
-    padding: 20px;
-    margin-top: 40px; /* Push content down below Nav bar */
-    grid-template-rows: 1fr; /* Ensures proper content stretching */
-}
-/* Section for introductory text */
-section {
-   padding-bottom: 50px;
-   border-bottom: 1px solid #ccc;
-    margin-bottom: 50px;
-}
-
-/* Main content styles */
-main {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Make sure main takes up the left side of the container */
-    grid-column: 1; /* Ensures that main content stays in the left column */
-}
-/* Main PAGE Table styles */
-table {
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-top: 20px;
-    box-shadow: #ddd 0px 1px 2px;   /* Box shadow to make table pop more */
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-    box-shadow: #ddd 0px 1px 2px;   /* Box shadow to make table pop more */
-}
-th {
-    background-color: #f2f2f2;
-}
-td {
-    background-color: #f9f9f9;
-}
-/* Bottom Image -- Main Page */
-
-.image-section img{
-    float: left;
-    width: 50%;
-    margin: 0px 10px;
-
-}
-.image-section p{
-    padding: 10px;
-}
-
-/* Sidebar styles */
-aside {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Make sure aside takes up the right column */
-    grid-column: 2; /* Ensures that the aside goes in the right column */
-}
-/* DONT TOUCH!!!! */
-main img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 20px;
-}
-
-aside ul {
-    list-style: none;
-    padding: 0;
-}
-
-aside ul li {
-    margin-bottom: 10px;
-}
-
-/* Footer styles */
-footer {
-    background: #333;
+.btn {
+    background: #00bcd4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
     color: white;
+    font-weight: bold;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background: #008ba3;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0; /* Ensure it's behind the content but not hidden */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px 10%;
+    background: #111;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-box {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Contact Page */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+#form-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
     padding: 10px;
-    font-size: 0.9em;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-form button {
+    background: #00bcd4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #008ba3;
 }

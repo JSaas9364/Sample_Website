@@ -1,10 +1,8 @@
- 
 function validateEmails(){
     var email = document.getElementById("email").value;
     var confirmEmail = document.getElementById("confirmEmail").value;
     var errorMessage = document.getElementById("errorMessage");
 
-// OUTPUT INNTER HTML ALERT MESSAGE IF EMAILS DO NOT MATCH  
     if(email !== confirmEmail){
         errorMessage.innerHTML = "Emails do not match!";
         return false;
