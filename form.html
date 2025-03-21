@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="form-page">
-
-    <!-- Background Video -->
-    <video autoplay muted loop id="form-background-video">
-        <source src="images/tree.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 
     <header>
         <div class="logo">
@@ -20,61 +14,61 @@
                 <img src="images/logo.png" alt="Game Logo">
             </a>
         </div>
-    
-        <!-- Hamburger Menu (Checkbox) -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
+
+            <!-- Hamburger Menu -->
+        <div class="menu-icon" onclick="toggleMenu(this)">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </label>
-    
-        <nav>
-            <!-- Close Button -->
-            <label for="menu-toggle" class="close-btn">✕</label>
-            <ul id="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html">Gallery</a></li>
-                <li><a href="/index.html">Games</a></li>
-                <li><a href="/index.html">Blog</a></li>
-                <li><a href="/index.html">More</a></li>
-                <li><a href="/form.html" class="btn">Join Now</a></li>
+        </div>
+
+        <nav><!-- Header Menu -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="more.html">More</a></li>
+                <li><a href="form.html" class="btn">Join Now</a></li>
             </ul>
         </nav>
     </header>
 
+    <section class= "hero">
+           <!-- Background Video -->
+    <video autoplay muted loop class="background-video" id = 'form-background-video'>
+        <source src="images/tree.mp4" type="video/mp4">
+    </video>
+            <!-- Form Section -->
     <div class="contact-page">
         <div class="contact-content">
             <h2>Contact Us</h2>
             <p>If you have any questions, feel free to reach out to us!</p>
 
             <form action="submit_form.php" method="POST" class="contact-form" onsubmit="return validateEmails()">
-                <!-- First Name -->
                 <label for="first-name">First Name:</label>
                 <input type="text" id="first-name" name="first-name" required>
 
-                <!-- Last Name -->
                 <label for="last-name">Last Name:</label>
                 <input type="text" id="last-name" name="last-name" required>
 
-                <!-- Email -->
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
 
-                <!-- Confirm Email -->
                 <label for="confirm-email">Confirm Email Address:</label>
-                <input type="email" id="confirmEmail" name="confirm-email" required>
+                <input type="email" id="confirm-email" name="confirm-email" required>
                 <div id="errorMessage" style="color: red;"></div>
 
-                <!-- Message -->
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <!-- Submit Button -->
-                <button type="submit">Submit</button>
+                <button type="submit" class="btn">Submit</button>
             </form>
         </div>
     </div>
+    </section>
+
+
 
     <footer>
         <p>&copy; 2025 Game Website</p>

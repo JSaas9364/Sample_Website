@@ -9,39 +9,38 @@
 <body>
 
     <header>
+            <!-- Main Logo -->
         <div class="logo">
             <a href="index.html">
                 <img src="images/logo.png" alt="Game Logo">
             </a>
         </div>
-    
-        <!-- Hamburger Menu (Checkbox) -->
-        <div class="container" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+
+            <!-- Hamburger Menu -->
+        <div class="menu-icon" onclick="toggleMenu(this)">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-    
-        <nav>
-            <!-- Close Button -->
-            <label for="menu-toggle" class="close-btn"></label>
-            <ul id="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html">Gallery</a></li>
-                <li><a href="/index.html">Games</a></li>
-                <li><a href="/index.html">Blog</a></li>
-                <li><a href="/index.html">More</a></li>
-                <li><a href="/form.html" class="btn">Join Now</a></li>
+
+        <nav><!-- Header Menu -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="more.html">More</a></li>
+                <li><a href="form.html" class="btn">Join Now</a></li>
             </ul>
         </nav>
     </header>
 
-
     <section class="hero">
-        <video autoplay muted loop id="background-video">
+            <!-- Background Video -->
+        <video autoplay muted loop class="background-video">
             <source src="images/background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
+            <!-- H1 Title Page -->
         <div class="hero-content">
             <h1>WELCOME TO THE WORLD OF GAMING</h1>
             <p>Immerse yourself in a universe of adventure, strategy, and action.</p>
@@ -68,11 +67,11 @@
             </div>
         </section>
     </main>
-    
+
     <footer>
         <p>&copy; 2025 Game Website</p>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>
