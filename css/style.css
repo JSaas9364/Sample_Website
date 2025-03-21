@@ -42,28 +42,6 @@ body, html {
     }
 }
 
-
-/* ================= Responsive Navigation for Small Screens ^^^^^^^^ ================= */
-
-header {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: grid;
-    grid-template-columns: 1fr auto .2fr; /* Logo | Nav Links | Button */
-    align-items: center;
-    padding: 10px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 160px;
-    width: auto;
-    cursor: pointer;
-}
 /* ================= Experimental vvvvvvvvvvv ================= */
 @media screen and (min-width: 801px){
     .menu-icon {
@@ -96,8 +74,31 @@ header {
     transform: translateY(-11px) rotate(45deg);
 }
 
-
 /* ================= Experimental ^^^^^^^ ================= */
+
+
+/* ================= Responsive Navigation for Small Screens ^^^^^^^^ ================= */
+
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-columns: 1fr auto .2fr; /* Logo | Nav Links | Button */
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 160px;
+    width: auto;
+    cursor: pointer;
+}
+
 
 /* Navigation */
 nav {
