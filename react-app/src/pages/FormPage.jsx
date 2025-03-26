@@ -8,16 +8,38 @@ export default function FormPage() {
   const [confirmEmail, setConfirmEmail] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+  
     if (email !== confirmEmail) {
       setError('Emails do not match!');
-    } else {
-      setError('');
-      alert('Form submitted!');
-      // In a real app, send form data here
+      return;
+    }
+  
+    setError('');
+  
+    const payload = {
+      name: `${document.getElementById('first-name').value} ${document.getElementById('last-name').value}`,
+      email: email,
+      message: document.getElementById('message').value
+    };
+    
+  
+    try {
+      const res = await fetch('http://localhost:3001/api/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+  
+      const data = await res.json();
+      alert('Message sent! ID: ' + data.id);
+    } catch (err) {
+      alert('Failed to send message.');
+      console.error(err);
     }
   };
+  
 
   return (
     <div id="form-page">

@@ -9,7 +9,7 @@ export default function HomePage() {
           <a href="/"><img src="/images/logo.png" alt="Game Logo" /></a>
         </div>
         <nav>
-        <ul className="nav-links">
+          <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/">Gallery</Link></li>
             <li><Link to="/">Games</Link></li>
