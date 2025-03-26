@@ -4,7 +4,7 @@ A basic front-end project built using **HTML**, **CSS**, and **JavaScript**.
 
 This is a work-in-progress, with plans to integrate:
 
-- **React** for dynamic components
+- **React** for dynamic components ✅
 - **SQL** for backend database integration
 - **Node.js** and **Express** for server-side logic
 - **REST API** for data handling
