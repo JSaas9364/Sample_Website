@@ -1,4 +1,5 @@
 import './HomePage.css';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   return (
@@ -8,14 +9,15 @@ export default function HomePage() {
           <a href="/"><img src="/images/logo.png" alt="Game Logo" /></a>
         </div>
         <nav>
-          <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Gallery</a></li>
-            <li><a href="/">Games</a></li>
-            <li><a href="/">Blog</a></li>
-            <li><a href="/">More</a></li>
-            <li><a href="/form.html" className="btn">Join Now</a></li>
+        <ul className="nav-links">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/">Gallery</Link></li>
+            <li><Link to="/">Games</Link></li>
+            <li><Link to="/">Blog</Link></li>
+            <li><Link to="/">More</Link></li>
+            <li><Link to="/form" className="btn">Join Now</Link></li>
           </ul>
+
         </nav>
         <div className="menu-icon" onClick={() => toggleMenu()}>
           <span className="bar"></span>
