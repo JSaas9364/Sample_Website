@@ -9,13 +9,14 @@ export default function HomePage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isRegistering, setIsRegistering] = useState(false); // Toggle between login and register
 
   function toggleMenu() {
     document.querySelector('.menu-icon')?.classList.toggle("change");
     document.querySelector(".nav-links")?.classList.toggle("menu-open");
   }
 
-  const handleLogin = async () => {
+  const handleAuth = async () => {
     setError('');
     if (!username || !password) {
       setError('Please enter both username and password.');
@@ -23,22 +24,39 @@ export default function HomePage() {
     }
 
     try {
-      const res = await fetch('http://localhost:3001/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
-      });
+      if (isRegistering) {
+        // Registration logic
+        const res = await fetch('http://localhost:3001/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password }),
+        });
 
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.message || 'Invalid credentials');
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.message || 'Failed to register');
+        }
+
+        alert('Registration successful! You can now log in.');
+        setIsRegistering(false); // Switch to login mode after successful registration
+      } else {
+        // Login logic
+        const res = await fetch('http://localhost:3001/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password }),
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.message || 'Invalid credentials');
+        }
+
+        login(data.token); // Save token in context and localStorage
+        setShowLogin(false); // Close modal after successful login
       }
-
-      const data = await res.json();
-      login(data.token); // Save token in context and localStorage
-      setShowLogin(false); // Close modal
     } catch (err) {
-      setError(err.message || 'Invalid username or password.');
+      setError(err.message || 'An error occurred.');
     }
   };
 
@@ -56,7 +74,7 @@ export default function HomePage() {
             <li><Link to="/">Blog</Link></li>
             <li>
               {isLoggedIn ? (
-                <button onClick={logout} className="btn">Logout</button>
+                <span onClick={logout}>Logout</span>
               ) : (
                 <span onClick={() => setShowLogin(true)} style={{ cursor: 'pointer' }}>
                   Login
@@ -108,11 +126,11 @@ export default function HomePage() {
         <p>&copy; {new Date().getFullYear()} Game Website</p>
       </footer>
 
-      {/* Login Modal */}
+      {/* Login/Register Modal */}
       {showLogin && (
         <div className="modal-overlay" onClick={() => setShowLogin(false)} role="dialog" aria-modal="true">
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2>Login</h2>
+            <h2>{isRegistering ? 'Register' : 'Login'}</h2>
             <div className="input-group">
               <label htmlFor="username">Username</label>
               <input
@@ -134,7 +152,32 @@ export default function HomePage() {
               />
             </div>
             {error && <p style={{ color: 'red', marginBottom: '1rem' }}>{error}</p>}
-            <button type="button" onClick={handleLogin} className="btn">Login</button>
+            <button type="button" onClick={handleAuth} className="btn">
+              {isRegistering ? 'Register' : 'Login'}
+            </button>
+            <p>
+              {isRegistering ? (
+                <>
+                  Already have an account?{' '}
+                  <span
+                    style={{ color: 'blue', cursor: 'pointer' }}
+                    onClick={() => setIsRegistering(false)}
+                  >
+                    Login here
+                  </span>
+                </>
+              ) : (
+                <>
+                  Don't have an account?{' '}
+                  <span
+                    style={{ color: 'blue', cursor: 'pointer' }}
+                    onClick={() => setIsRegistering(true)}
+                  >
+                    Register here
+                  </span>
+                </>
+              )}
+            </p>
           </div>
         </div>
       )}
