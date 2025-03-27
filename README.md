@@ -26,33 +26,33 @@ This project is a **full-stack web application** built using **React**, **Expres
 SAMPLE_WEBSITE/
 ├── api-server/
 │   ├── auth.db       # SQLite database for authentication <br/>
-│   ├── data.db       # SQLite database for form submissions
-│   ├── index.js      # Express server with routes and logic
-├── css/
-│   └── style.css     # Custom styles for the app
-├── images/
-│   ├── adventure.webp # Image assets
-│   ├── background.mp4 # Video background
-│   └── logo.png       # Logo image
-├── js/
-│   └── script.js      # JavaScript file for logic
-│   └── node_modules/  # Node modules for the app
-├── public/
-│   └── images/        # Public images for the app
-│   └── vite.svg       # Vite SVG icon
-├── src/
-│   ├── assets/        # Any assets needed
-│   ├── pages/         # React components for each page
-│   │   ├── FormPage.jsx # Form page for submitting messages
-│   │   ├── HomePage.jsx # Home page
-│   │   ├── LoginPage.jsx # Login page
-│   │   └── RegisterPage.jsx # Register page
-│   ├── App.jsx         # Main app component
-│   ├── authContext.jsx # Context for user authentication state
-│   ├── .gitignore      # Git ignore file
-│   ├── package.json    # Lock file for npm packages
-│   ├── package-lock.json # Lock file for npm packages
-│   └── vite.config.js  # Vite configuration
+│   ├── data.db       # SQLite database for form submissions <br/>
+│   ├── index.js      # Express server with routes and logic<br/>
+├── css/<br/>
+│   └── style.css     # Custom styles for the app<br/>
+├── images/<br/>
+│   ├── adventure.webp # Image assets<br/>
+│   ├── background.mp4 # Video background<br/>
+│   └── logo.png       # Logo image<br/>
+├── js/<br/>
+│   └── script.js      # JavaScript file for logic<br/>
+│   └── node_modules/  # Node modules for the app<br/>
+├── public/<br/>
+│   └── images/        # Public images for the app<br/>
+│   └── vite.svg       # Vite SVG icon<br/>
+├── src/<br/>
+│   ├── assets/        # Any assets needed<br/>
+│   ├── pages/         # React components for each page<br/>
+│   │   ├── FormPage.jsx # Form page for submitting messages<br/>
+│   │   ├── HomePage.jsx # Home page<br/>
+│   │   ├── LoginPage.jsx # Login page<br/>
+│   │   └── RegisterPage.jsx # Register page<br/>
+│   ├── App.jsx         # Main app component<br/>
+│   ├── authContext.jsx # Context for user authentication state<br/>
+│   ├── .gitignore      # Git ignore file<br/>
+│   ├── package.json    # Lock file for npm packages<br/>
+│   ├── package-lock.json # Lock file for npm packages<br/>
+│   └── vite.config.js  # Vite configuration<br/>
 
 ---
 
