@@ -26,11 +26,17 @@ export default function FormPage() {
     
   
     try {
+      const token = localStorage.getItem('token');
+
       const res = await fetch('http://localhost:3001/api/messages', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(payload),
       });
+      
   
       const data = await res.json();
       alert('Message sent! ID: ' + data.id);
@@ -58,7 +64,11 @@ export default function FormPage() {
                 <li><Link to="/">Gallery</Link></li>
                 <li><Link to="/">Games</Link></li>
                 <li><Link to="/">Blog</Link></li>
-                <li><Link to="/">More</Link></li>
+                <li>
+              <span onClick={() => setShowLogin(true)} style={{ cursor: 'pointer' }}>
+                Login
+              </span>
+            </li>
                 <li><Link to="/form" className="btn">Join Now</Link></li>
             </ul>
         </nav>
@@ -102,6 +112,7 @@ export default function FormPage() {
         <p>&copy; 2025 Game Website</p>
       </footer>
     </div>
+
   );
 }
 
