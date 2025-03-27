@@ -80,21 +80,21 @@ app.post('/api/register', (req, res) => {
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
 
-  // Check if username exists in the `auth.db` database
+  // Query the 'auth.db' database to check if the username exists
   authDb.get('SELECT * FROM users WHERE username = ?', [username], (err, row) => {
     if (err || !row) {
       return res.status(400).json({ message: 'Invalid username or password' });
     }
 
-    // Compare entered password with the hashed password in the database
+    // Compare the entered password with the hashed password in the database
     bcrypt.compare(password, row.password, (err, match) => {
       if (err || !match) {
         return res.status(400).json({ message: 'Invalid username or password' });
       }
 
-      // Generate JWT token
+      // Generate JWT token if credentials match
       const token = jwt.sign({ userId: row.id }, SECRET, { expiresIn: '1h' });
-      res.json({ token });
+      res.json({ token }); // Send the token back to the client
     });
   });
 });
