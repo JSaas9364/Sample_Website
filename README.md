@@ -24,7 +24,7 @@ This project is a **full-stack web application** built using **React**, **Expres
 
 ## File Structure
 
-``
+``SAMPLE_WEBSITE/ ├── api-server/ │ ├── auth.db # SQLite database for authentication │ ├── data.db # SQLite database for form submissions │ ├── index.js # Express server with routes and logic ├── css/ │ ├── style.css # Custom styles for the app ├── images/ │ ├── adventure.webp # Image assets │ ├── background.mp4 # Video background │ ├── logo.png # Logo image ├── js/ │ ├── script.js # JavaScript file for logic │ ├── node_modules/ # Node modules for the app ├── public/ │ ├── images/ # Public images for the app │ ├── index.html # Main HTML page │ ├── vite.svg # Vite SVG icon ├── src/ │ ├── assets/ # Any assets needed │ ├── pages/ # React components for each page │ │ ├── FormPage.jsx # Form page for submitting messages │ │ ├── HomePage.jsx # Home page │ │ ├── LoginPage.jsx # Login page │ │ ├── RegisterPage.jsx # Register page │ ├── App.jsx # Main app component │ ├── authContext.jsx # Context for user authentication state │ ├── index.js # Main React entry point ├── .gitignore # Git ignore file ├── package-lock.json # Lock file for npm packages ├── package.json # Node.js project metadata ├── README.md # Project documentation ├── vite.config.js # Vite configuration
 
 
 
