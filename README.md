@@ -24,38 +24,35 @@ This project is a **full-stack web application** built using **React**, **Expres
 
 ## File Structure
 SAMPLE_WEBSITE/
-•	api-server/ # Backend server
-o	auth.db # SQLite database for authentication
-o	data.db # SQLite database for form submissions
-o	index.js # Express server with routes and logic
-•	css/ # Styles and custom styling for the app
-o	style.css # Custom styles for the app
-•	images/ # Image assets
-o	adventure.webp # Image assets
-o	background.mp4 # Video background
-o	logo.png # Logo image
-•	js/ # JavaScript for logic
-o	script.js # JavaScript file for logic
-o	node_modules/ # Node modules for the app
-•	public/ # Public files for the app
-o	images/ # Public images
-o	vite.svg # Vite SVG icon
-•	src/ # Source files for the app
-o	assets/ # Any assets needed
-o	pages/ # React components for each page
-	FormPage.jsx # Form page for submitting messages
-	HomePage.jsx # Home page
-	LoginPage.jsx # Login page
-	RegisterPage.jsx # Register page
-	App.jsx # Main app component
-	authContext.jsx # Context for user authentication state
-o	.gitignore # Git ignore file
-o	package.json # Lock file for npm packages
-o	package-lock.json # Lock file for npm packages
-o	README.md # Project documentation
-o	vite.config.js # Vite configuration
-
-
+├── api-server/
+│   ├── auth.db       # SQLite database for authentication
+│   ├── data.db       # SQLite database for form submissions
+│   ├── index.js      # Express server with routes and logic
+├── css/
+│   └── style.css     # Custom styles for the app
+├── images/
+│   ├── adventure.webp # Image assets
+│   ├── background.mp4 # Video background
+│   └── logo.png       # Logo image
+├── js/
+│   └── script.js      # JavaScript file for logic
+│   └── node_modules/  # Node modules for the app
+├── public/
+│   └── images/        # Public images for the app
+│   └── vite.svg       # Vite SVG icon
+├── src/
+│   ├── assets/        # Any assets needed
+│   ├── pages/         # React components for each page
+│   │   ├── FormPage.jsx # Form page for submitting messages
+│   │   ├── HomePage.jsx # Home page
+│   │   ├── LoginPage.jsx # Login page
+│   │   └── RegisterPage.jsx # Register page
+│   ├── App.jsx         # Main app component
+│   ├── authContext.jsx # Context for user authentication state
+│   ├── .gitignore      # Git ignore file
+│   ├── package.json    # Lock file for npm packages
+│   ├── package-lock.json # Lock file for npm packages
+│   └── vite.config.js  # Vite configuration
 
 ---
 
