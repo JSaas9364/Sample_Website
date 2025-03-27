@@ -11,8 +11,6 @@ API Integration: Integrated RESTful APIs to manage user messages and authenticat
 Local Storage for Data: Data is temporarily stored in localStorage for speed and ease of implementation.
 
 File Structure:
-graphql
-Copy
 SAMPLE_WEBSITE/
 ├── api-server/
 │   ├── auth.db              # SQLite database for authentication
@@ -51,31 +49,19 @@ SAMPLE_WEBSITE/
 
 How to Run the Project:
 Clone this repository:
-
-bash
-Copy
 git clone https://github.com/yourusername/your-repository.git
+
 Install dependencies:
-
-bash
-Copy
 npm install
+
 Start the development server:
-
-bash
-Copy
 npm run dev
-The backend is located in the api-server folder and is run separately with:
 
-bash
-Copy
+The backend is located in the api-server folder and is run separately with:
 node index.js
 Technologies Used:
 React: Frontend library
-
 Express: Backend framework
-
 SQLite: Database
-
 JWT: Authentication mechanism
 
