@@ -25,7 +25,7 @@ This project is a **full-stack web application** built using **React**, **Expres
 ## File Structure
 SAMPLE_WEBSITE/
 ├── api-server/
-│   ├── auth.db       # SQLite database for authentication
+│   ├── auth.db       # SQLite database for authentication <br/>
 │   ├── data.db       # SQLite database for form submissions
 │   ├── index.js      # Express server with routes and logic
 ├── css/
