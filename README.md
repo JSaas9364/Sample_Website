@@ -11,6 +11,7 @@ This is a work-in-progress, with plans to integrate:
 - **Authentication (OAuth / JWT)** for user login system
 
 🔧 Focus: Practicing modern web development workflows and in-demand full-stack skills.
+    Current authentication uses JWT stored in localStorage for simplicity.
 
 ---
 
