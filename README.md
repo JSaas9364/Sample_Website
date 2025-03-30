@@ -93,12 +93,6 @@ SAMPLE_WEBSITE/
 
 ---
 
-## Contributing
-
-We welcome contributions to improve this project. If you have any ideas or enhancements, feel free to fork the repository and create a pull request.
-
----
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
